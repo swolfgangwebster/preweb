@@ -14,4 +14,14 @@ body {
     border-color: whitesmoke;
     border-radius: 10px;
     text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
 }
+
+div{
+    float: left;
+}
+
+#info {
+    margin-left:10px;
+}
+
