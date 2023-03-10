@@ -19,6 +19,6 @@ function timeDiff(str){
 
 }
 
-const ad = timeDiff("8/29/2021");
-console.log(`${ad[0]}y ${ad[1]}m ${ad[2]}d`);
-document.getElementById("tenure").textContent =`${ad[0]}y ${ad[1]}m ${ad[2]}d`
+const arrdate = timeDiff("8/29/2021");
+console.log(`${arrdate[0]}y ${arrdate[1]}m ${arrdate[2]}d`);
+document.getElementById("tenure").textContent =`${arrdate[0]}y ${arrdate[1]}m ${arrdate[2]}d`
