@@ -2,7 +2,41 @@ body {
     background: orange;
     border-radius: 5%;
     border-color: black;
+    font-family:Arial, Helvetica, sans-serif;
+
 }
+
+div.hide {
+    display: none;
+}
+
+div#back div div {
+    float: left;
+}
+
+div#back{
+    color: white;
+}
+
+div#back h1 {
+    text-align: center;
+}
+
+body.black{
+    background-color: black;
+}
+
+
+div#content {
+    float: left;
+    width: 90%;;
+}
+
+div#side {
+    float:right;
+    width: 10%;
+}
+
 
 #badge {
     background-color: rgb(112, 199, 233);
@@ -14,14 +48,114 @@ body {
     border-color: whitesmoke;
     border-radius: 10px;
     text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
+    margin: auto;
+    margin-top: 100px;
+    animation: pulse 1s infinite alternate;
+    box-shadow: 0px 0px 5px 0px black;
+    
 }
 
-div{
-    float: left;
+#back {
+    margin-left: 20%;
+    width: 60%;
+
 }
+
+@keyframes pulse {
+    0% {box-shadow: 0px 0px 5px 0px black;}
+    100% {box-shadow: 0px 0px 100px 0px black}
+    
+}
+
+#badge:hover {
+    cursor: pointer;
+    animation: prep 1s;
+    animation: spread 15s forwards;
+}
+@keyframes prep {
+    100% {box-shadow: 0px 0px 0px 0px black}
+    
+}
+@keyframes spread {
+    50% {box-shadow: 0px 0px 900px 1000px black;}
+    62% {box-shadow: 0px 0px 50px 5px red, 0px 0px 900px 1000px black}
+    60% {box-shadow:  0px 0px 50px 10px yellow , 0px 0px 900px 1000px black}
+    58% {box-shadow:  0px 0px 50px 15px green , 0px 0px 900px 1000px black}
+    56% {box-shadow:  0px 0px 50px 20px blue, 0px 0px 900px 1000px black}
+    54% {box-shadow:  0px 0px 50px 25px purple, 0px 0px 900px 1000px black }
+    52% {box-shadow:  0px 0px 50px 30px violet, 0px 0px 900px 1000px black }
+    100% {box-shadow: 0px 0px 50px 5px red, 0px 0px 900px 1000px black;}
+}
+
 
 #info {
     margin-left:10px;
 }
+h1{
+    line-height: 0px;
+}
+h4#personal {line-height: 0px;}
 
+#badge.fade {
+    animation: fade 2s forwards;
+
+}
+#badge.fade img{
+    animation: picfade 2s 1.5s forwards;
+}
+
+@keyframes fade {
+    0% {box-shadow:0px 0px 50px 5px red, 0px 0px 900px 1000px black ;}
+    50% {
+        color: red;
+        border-color: black;
+        box-shadow: 0px 0px 900px 1000px black;
+    }
+    75% {
+        background-color: black;
+        border-color: black;
+        box-shadow: 0px 0px 900px 1000px black;
+    }
+    90% {
+        background-color: black;
+        border-color: black;
+        box-shadow: 0px 0px 900px 1000px black;
+    }
+    100% {
+        font-style: black;
+        background-color: black;
+        border-color: black;
+        box-shadow: 0px 0px 900px 1000px black;
+    }
+}
+
+@keyframes picfade {
+    50% {box-shadow: 0px 0px 5px 5px red;}
+    75% {box-shadow: 0px 0px 100px 100px red;}
+    100% {opacity: 0;}
+}
+
+ul {
+    list-style:none;
+}
+
+#pic2 {
+    cursor: pointer;
+    animation: pulse2 1s infinite alternate;
+}
+
+@keyframes pulse2 {
+    0% {box-shadow: 0px 0px 5px 0px rgb(112, 199, 233);}
+    100% {box-shadow: 0px 0px 100px 0px rgb(112, 199, 233)}
+    
+}
+
+
+div.fadeIn, a {
+    animation: inw 1s;
+}
+
+@keyframes inw {
+    0% {color: black}
+    100% {color: whitesmoke;}
+}

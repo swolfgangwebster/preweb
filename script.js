@@ -19,6 +19,31 @@ function timeDiff(str){
 
 }
 
-const arrdate = timeDiff("8/29/2021");
-console.log(`${arrdate[0]}y ${arrdate[1]}m ${arrdate[2]}d`);
+const arrdate = timeDiff("9/13/2020");
 document.getElementById("tenure").textContent =`${arrdate[0]}y ${arrdate[1]}m ${arrdate[2]}d`
+
+const arrage = timeDiff("6/1/1995");
+document.getElementById("age").textContent=`${arrage[0]}yo | `;
+/**************/
+
+const card = document.getElementById("badge");
+card.addEventListener("click", async () => {
+    card.classList.add("fade");
+    await sleep(4000);
+    document.body.classList.add("black");
+    document.getElementById("sidebar").classList.add("hide")
+    document.getElementById("back").classList.remove("hide")
+    document.getElementById("back").classList.add("fadeIn")
+});
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+const back = document.getElementById("pic2");
+back.addEventListener("click", async () => {
+    card.classList.remove("fade");
+    document.body.classList.remove("black");
+    document.getElementById("back").classList.add("hide")
+    document.getElementById("sidebar").classList.remove("hide")
+});
